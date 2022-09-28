@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BinarySearchTest {
 
     @Test
-    void testBinarySearch(){
+    void testBinarySearchInt(){
         Integer[] nums = new Integer[] {0, 2, 4, 6};
 
         assertEquals(-1, BinarySearch.find(nums, -1));
@@ -25,6 +25,24 @@ class BinarySearchTest {
 
         assertEquals(3, BinarySearch.find(nums, 6));
         assertEquals(-1, BinarySearch.find(nums, 7));
+
+    }
+
+    @Test
+    void testBinarySearchChar(){
+        Character[] chars = new Character[] {'a', 'c', 'e'};
+
+
+        assertEquals(0, BinarySearch.find(chars, 'a'));
+        assertEquals(-1, BinarySearch.find(chars, 'b'));
+
+        assertEquals(1, BinarySearch.find(chars, 'c'));
+        assertEquals(-1, BinarySearch.find(chars, 'd'));
+
+        assertEquals(2, BinarySearch.find(chars, 'e'));
+        assertEquals(-1, BinarySearch.find(chars, 'f'));
+
+
 
     }
 }
