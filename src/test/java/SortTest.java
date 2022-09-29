@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sort.BubbleSort;
+import sort.MergeSort;
 import sort.QuickSort;
 import sort.SelectionSort;
+
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -14,19 +16,25 @@ public class SortTest {
     }
 
     @Test
-    void testQuickSearch() {
+    void testMergeSort() {
+        MergeSort.sort(nums);
+        assertTrue(isSorted(nums));
+    }
+
+    @Test
+    void testQuickSort() {
         QuickSort.sort(nums);
         assertTrue(isSorted(nums));
     }
 
     @Test
-    void testBubbleSearch() {
+    void testBubbleSort() {
         BubbleSort.sort(nums);
         assertTrue(isSorted(nums));
     }
 
     @Test
-    void testSelectionSearch() {
+    void testSelectionSort() {
         SelectionSort.sort(nums);
         assertTrue(isSorted(nums));
     }
