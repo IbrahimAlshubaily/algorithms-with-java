@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sort.BubbleSort;
+import sort.QuickSort;
 import sort.SelectionSort;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -10,6 +11,12 @@ public class SortTest {
     @BeforeEach
     void setUp() {
         nums = new Integer[] {9, 1, 8, 7, 2, 5, -2, 5, -99, 0, 12, 55, 7, 77, 8};
+    }
+
+    @Test
+    void testQuickSearch() {
+        QuickSort.sort(nums);
+        assertTrue(isSorted(nums));
     }
 
     @Test
