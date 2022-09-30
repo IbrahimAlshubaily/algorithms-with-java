@@ -69,7 +69,7 @@ public class ArrayList <T> implements List {
 
     @Override
     public boolean contains(Object o) {
-        return indexOf(0) != -1;
+        return indexOf(o) != -1;
     }
 
     @Override
@@ -96,9 +96,8 @@ public class ArrayList <T> implements List {
 
     @Override
     public int indexOf(Object o) {
-        T item = (T) o;
         for (int i = 0; i < length; i++){
-            if (data[i].equals(item))
+            if (data[i].equals(o))
                 return i;
         }
         return -1;
